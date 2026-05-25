@@ -11,8 +11,16 @@ import OrderTrackingInput from '@/components/OrderTrackingInput'
 import FinancialDashboard from '@/components/FinancialDashboard'
 import OrderEmailSwitchboard from '@/components/OrderEmailSwitchboard'
 
+const TABS = [
+  { key: 'manage', label: 'Manage Products', icon: '⚙️' },
+  { key: 'add', label: 'Add New', icon: '✚' },
+  { key: 'orders', label: 'Orders & Analytics', icon: '📊' },
+] as const
+
+type TabKey = typeof TABS[number]['key']
+
 export default function AdminTabs({ products, categories, orders }: { products: any[], categories: any[], orders: any[] }) {
-  const [activeTab, setActiveTab] = useState<'manage' | 'add' | 'orders'>('manage')
+  const [activeTab, setActiveTab] = useState<TabKey>('manage')
   const [isPublishing, setIsPublishing] = useState(false)
   const [justPublished, setJustPublished] = useState(false)
 
@@ -26,56 +34,44 @@ export default function AdminTabs({ products, categories, orders }: { products: 
 
   return (
     <div className="w-full">
-      {/* Tab Navigation & Publish Container */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-gray-800 pb-4 gap-6">
-        <div className="flex flex-wrap gap-4">
+      {/* Tab Navigation */}
+      <div className="bg-white/30 backdrop-blur-sm border border-[#2b2522]/8 rounded-2xl p-2 mb-8 shadow-sm">
+        <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3">
+          <div className="flex flex-wrap gap-1.5">
+            {TABS.map(tab => (
+              <button 
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`px-5 py-3 text-[11px] font-bold uppercase tracking-[0.15em] transition-all rounded-xl flex items-center gap-2.5 ${
+                  activeTab === tab.key 
+                    ? 'bg-[#2b2522] text-[#F5EBE0] shadow-lg shadow-[#2b2522]/15 scale-[1.02]' 
+                    : 'text-[#6e625c] hover:text-[#2b2522] hover:bg-white/50'
+                }`}
+              >
+                <span className="text-sm">{tab.icon}</span>
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
           <button 
-            onClick={() => setActiveTab('manage')}
-            className={`px-6 py-3 text-xs font-black uppercase tracking-widest transition-all ${
-              activeTab === 'manage' 
-                ? 'bg-white text-black scale-105 shadow-xl' 
-                : 'bg-black text-gray-400 border border-gray-800 hover:text-white hover:border-white'
-            }`}
+            onClick={handlePublish}
+            disabled={isPublishing}
+            className={`px-6 py-3 text-[11px] font-black uppercase tracking-[0.15em] transition-all rounded-xl flex items-center justify-center gap-2.5 ${
+              justPublished 
+                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
+                : 'btn-neon shadow-lg shadow-blue-500/10'
+            } disabled:opacity-50`}
           >
-            Manage Existing Items
-          </button>
-          <button 
-            onClick={() => setActiveTab('add')}
-            className={`px-6 py-3 text-xs font-black uppercase tracking-widest transition-all ${
-              activeTab === 'add' 
-                ? 'bg-white text-black scale-105 shadow-xl' 
-                : 'bg-black text-gray-400 border border-gray-800 hover:text-white hover:border-white'
-            }`}
-          >
-            Add New Items & Categories
-          </button>
-          <button 
-            onClick={() => setActiveTab('orders')}
-            className={`px-6 py-3 text-xs font-black uppercase tracking-widest transition-all ${
-              activeTab === 'orders' 
-                ? 'bg-white text-black scale-105 shadow-xl' 
-                : 'bg-black text-gray-400 border border-gray-800 hover:text-white hover:border-white'
-            }`}
-          >
-            Orders Dashboard
+            {isPublishing ? (
+              <><span className="w-4 h-4 border-2 border-current/30 rounded-full border-t-current animate-spin" /> Publishing...</>
+            ) : justPublished ? (
+              <>✔ Live!</>
+            ) : (
+              <>🚀 Publish Changes</>
+            )}
           </button>
         </div>
-
-        <button 
-          onClick={handlePublish}
-          disabled={isPublishing}
-          className={`px-8 py-3 text-xs font-black uppercase tracking-widest transition-all ${
-            justPublished ? 'bg-green-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]'
-          } disabled:opacity-50 flex items-center gap-3`}
-        >
-          {isPublishing ? (
-            <><span className="w-4 h-4 border-2 border-white/50 rounded-full border-t-white animate-spin"></span> Publishing...</>
-          ) : justPublished ? (
-            <>✔ Everything is Live!</>
-          ) : (
-            <>Save & Publish to Live Site</>
-          )}
-        </button>
       </div>
 
       {/* Tab Contents */}
@@ -89,113 +85,123 @@ export default function AdminTabs({ products, categories, orders }: { products: 
       )}
 
       {activeTab === 'add' && (
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 animate-fade-in-up items-start">
-          <div className="w-full">
-            <CategoryManager categories={categories} />
-          </div>
-          <div className="w-full">
-            <h2 className="text-xl font-bold mb-6 uppercase tracking-widest border-l-4 border-white pl-4 text-white">Add New Product</h2>
-            <AdminProductForm categories={categories} />
+        <section className="animate-fade-in-up">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+            {/* Categories — narrow sidebar */}
+            <div className="lg:col-span-2">
+              <CategoryManager categories={categories} />
+            </div>
+            {/* Product Form — wider */}
+            <div className="lg:col-span-3">
+              <AdminProductForm categories={categories} />
+            </div>
           </div>
         </section>
       )}
 
       {activeTab === 'orders' && (
-        <section className="animate-fade-in-up max-w-4xl">
+        <section className="animate-fade-in-up">
           <FinancialDashboard orders={orders} />
           
-          <div className="bg-white text-black p-8 shadow-2xl">
-            <h2 className="text-2xl font-black mb-8 tracking-tighter uppercase border-b-2 border-black pb-4 flex justify-between items-center">
-              <span>Orders Ledger</span>
-              <span className="text-xs font-normal tracking-widest text-gray-400">Total: {orders?.length || 0}</span>
-            </h2>
+          <div className="bg-white/40 backdrop-blur-sm border border-[#2b2522]/8 p-6 md:p-8 shadow-lg rounded-2xl text-[#2b2522]">
+            <div className="flex justify-between items-center mb-8 pb-4 border-b border-[#2b2522]/8">
+              <div>
+                <h2 className="text-xl font-black tracking-tight uppercase text-[#2b2522]">Orders Ledger</h2>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#6e625c] font-bold mt-1">Complete transaction history</p>
+              </div>
+              <span className="text-xs font-bold tracking-wider text-[#6e625c] bg-[#F5EBE0]/80 px-3 py-1.5 rounded-full border border-[#2b2522]/8">
+                {orders?.length || 0} total
+              </span>
+            </div>
             
             {!orders || orders.length === 0 ? (
-              <div className="flex flex-col items-center justify-center h-[400px] border-2 border-dashed border-gray-200">
-                <p className="text-sm uppercase tracking-widest text-gray-400 font-bold animate-pulse">
-                  System awaiting active orders stream...
+              <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-[#2b2522]/10 rounded-xl">
+                <div className="text-4xl mb-4 opacity-30">📋</div>
+                <p className="text-sm uppercase tracking-widest text-[#6e625c] font-bold">
+                  No orders yet
                 </p>
+                <p className="text-xs text-[#6e625c]/60 mt-2">Orders will appear here when customers make purchases</p>
               </div>
             ) : (
-              <div className="space-y-12">
+              <div className="space-y-6">
                 {orders.map((order) => (
-                  <div key={order.id} className="group border-b border-gray-100 pb-12 last:border-0 text-black">
+                  <div key={order.id} className="group border border-[#2b2522]/8 rounded-xl p-5 hover:border-[#2b2522]/20 hover:shadow-md transition-all bg-white/20 text-[#2b2522]">
                     {/* Order Header */}
-                    <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
-                      <div>
-                        <div className="flex items-center gap-3 mb-2">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-4 gap-3">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-3 mb-2 flex-wrap">
                           <OrderStatusSelect orderId={order.id} currentStatus={order.status} />
-                          <span className="text-[10px] font-mono text-gray-400 uppercase tracking-tighter">
+                          <span className="text-[10px] font-mono text-[#6e625c] bg-[#F5EBE0]/80 px-2 py-0.5 rounded">
                             ORD-{order.id.split('-')[0].toUpperCase()}
                           </span>
                         </div>
-                        <h3 className="text-xl font-black tracking-tighter truncate max-w-md">
+                        <h3 className="text-base font-black tracking-tight truncate max-w-md text-[#2b2522]">
                           {order.customer_email}
                         </h3>
-                        <p className="text-[10px] uppercase tracking-widest text-gray-400 font-bold mt-1">
+                        <p className="text-[10px] uppercase tracking-[0.15em] text-[#6e625c] font-bold mt-1">
                           {new Date(order.created_at).toLocaleString('en-US', { 
                             month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' 
                           })}
                         </p>
                       </div>
-                      <div className="text-right">
-                        <p className="text-3xl font-black tracking-tighter">
+                      <div className="text-right flex-shrink-0">
+                        <p className="text-2xl font-black tracking-tight text-[#2b2522]">
                           ${parseFloat(String(order.total_amount)).toFixed(2)}
                         </p>
                         <OrderDeleteButton orderId={order.id} />
                       </div>
                     </div>
 
-                    {/* Shipping Details */}
+                    {/* Customer & Delivery Details */}
                     {(order.customer_name || order.shipping_address || order.phone_number) && (
-                      <div className="bg-gray-50 p-6 mb-4 border-l-4 border-black border border-gray-100">
-                        <div className="flex justify-between items-center mb-4">
-                          <p className="text-[10px] uppercase tracking-[0.2em] font-black text-gray-400 bg-white inline-block px-2">Shipping Details</p>
+                      <div className="bg-[#F5EBE0]/40 p-4 mb-4 border-l-4 border-[#2b2522] border border-[#2b2522]/8 rounded-r-xl">
+                        <div className="flex justify-between items-center mb-3">
+                          <p className="text-[10px] uppercase tracking-[0.2em] font-black text-[#6e625c]">Delivery Details</p>
                           {order.shipping_speed && (
-                            <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 ${
-                              order.shipping_speed === 'Rush' ? 'bg-red-500 text-white animate-pulse' :
+                            <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full ${
+                              order.shipping_speed === 'Rush' ? 'bg-red-500 text-white' :
                               order.shipping_speed === 'Express' ? 'bg-orange-500 text-white' :
-                              'bg-black text-white'
+                              'bg-[#2b2522] text-[#F5EBE0]'
                             }`}>
-                              {order.shipping_speed} Speed
+                              {order.shipping_speed}
                             </span>
                           )}
                         </div>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-3 text-[11px] font-black uppercase tracking-tight">
-                          {order.customer_name && <div><span className="text-gray-400 mr-2">NAME:</span> {order.customer_name}</div>}
-                          {order.phone_number && <div><span className="text-gray-400 mr-2">PHONE:</span> {order.phone_number}</div>}
-                          {order.shipping_address && <div className="lg:col-span-2 leading-relaxed p-3 bg-white border border-gray-100"><span className="text-gray-400 mr-2">DESTINATION:</span> {order.shipping_address}</div>}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-2 text-[11px] font-bold text-[#2b2522]">
+                          {order.customer_name && <div><span className="text-[#6e625c] mr-2 uppercase tracking-wider text-[10px]">Name:</span> {order.customer_name}</div>}
+                          {order.phone_number && <div><span className="text-[#6e625c] mr-2 uppercase tracking-wider text-[10px]">Phone:</span> {order.phone_number}</div>}
+                          {order.shipping_address && <div className="lg:col-span-2 p-2.5 bg-white/30 border border-[#2b2522]/8 rounded-lg mt-1"><span className="text-[#6e625c] mr-2 uppercase tracking-wider text-[10px]">Address:</span> {order.shipping_address}</div>}
                         </div>
                       </div>
                     )}
 
                     {/* Tracking Section & Manual Emails */}
-                    <div className="mb-8 p-6 bg-gray-50/50 border border-gray-100">
+                    <div className="mb-4 p-4 bg-[#EDEDE9]/30 border border-[#2b2522]/8 rounded-xl">
                       <OrderTrackingInput orderId={order.id} initialValue={order.tracking_number} />
                       <OrderEmailSwitchboard orderId={order.id} currentTracking={order.tracking_number} />
                     </div>
 
                     {/* Items List */}
-                    <div className="grid grid-cols-1 gap-4">
+                    <div className="grid grid-cols-1 gap-2">
                       {order.order_items?.map((item: any) => (
-                        <div key={item.id} className="flex items-center gap-6 bg-white border border-gray-100 p-4 hover:border-black transition-all group shadow-sm">
-                          <div className="w-16 h-20 bg-gray-50 flex-shrink-0 border border-gray-100 overflow-hidden shadow-sm">
+                        <div key={item.id} className="flex items-center gap-4 bg-white/30 border border-[#2b2522]/6 p-3 hover:border-[#2b2522]/15 transition-all group rounded-lg">
+                          <div className="w-12 h-14 bg-[#F5EBE0] flex-shrink-0 border border-[#2b2522]/8 overflow-hidden rounded-lg">
                             {item.products?.image_url ? (
                               <img 
                                 src={item.products.image_url} 
                                 alt="" 
-                                className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                               />
                             ) : (
-                              <div className="w-full h-full flex items-center justify-center text-[10px] text-gray-300">VOID</div>
+                              <div className="w-full h-full flex items-center justify-center text-[10px] text-[#6e625c]/30 font-bold">—</div>
                             )}
                           </div>
-                          <div className="flex-grow">
-                            <h4 className="text-xs font-black uppercase tracking-widest mb-1 truncate">
-                              {item.products?.title || 'Unknown Print'}
+                          <div className="flex-grow min-w-0">
+                            <h4 className="text-xs font-bold uppercase tracking-wider mb-0.5 truncate text-[#2b2522]">
+                              {item.products?.title || 'Unknown License'}
                             </h4>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                              QTY: {item.quantity} • UNIT PRICE: ${parseFloat(String(item.price_at_purchase)).toFixed(2)}
+                            <p className="text-[10px] text-[#6e625c] font-bold uppercase tracking-wider">
+                              Qty: {item.quantity} · ${parseFloat(String(item.price_at_purchase)).toFixed(2)}
                             </p>
                           </div>
                         </div>

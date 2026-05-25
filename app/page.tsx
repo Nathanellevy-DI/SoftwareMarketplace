@@ -37,7 +37,7 @@ export default async function ShopPage() {
       <header className="mb-20 border-b border-[#2b2522]/10 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div className="flex items-center gap-6 md:gap-8">
           <div className="w-16 h-16 md:w-20 md:h-20 bg-[#2b2522] text-[#F5EBE0] flex items-center justify-center font-black text-2xl md:text-3xl rounded-xl shadow-md uppercase">
-            FS
+            MP
           </div>
           <div>
             <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tight text-[#2b2522]">
@@ -51,10 +51,11 @@ export default async function ShopPage() {
       </header>
       
       {products.length === 0 ? (
-        <div className="text-center py-32 border border-dashed border-[#2b2522]/20 bg-[#EDEDE9]/30 rounded-xl">
-          <h2 className="text-2xl font-black uppercase tracking-wider mb-4 text-[#2b2522]">Catalog Empty</h2>
-          <p className="text-gray-500 max-w-md mx-auto text-sm leading-relaxed">
-            Configure the database connection and populate the marketplace via the Admin console to display your software licenses.
+        <div className="text-center py-32 border border-dashed border-[#2b2522]/15 bg-[#EDEDE9]/20 rounded-2xl">
+          <div className="text-5xl mb-6 opacity-20">🛍️</div>
+          <h2 className="text-2xl font-black uppercase tracking-wider mb-4 text-[#2b2522]">Coming Soon</h2>
+          <p className="text-[#6e625c] max-w-md mx-auto text-sm leading-relaxed">
+            Premium software products are being curated. Check back soon for exclusive tools and licenses.
           </p>
         </div>
       ) : (

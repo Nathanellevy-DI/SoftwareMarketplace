@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DevMarket | Software Marketplace & Portfolio",
+  title: "Software MP | Premium Software Marketplace",
   description: "Browse, test, and buy premium high-quality software, tools, and developer licenses.",
 };
 

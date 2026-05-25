@@ -97,25 +97,25 @@ export default function FinancialDashboard({ orders }: { orders: Order[] }) {
   }, [orders, timeFilter])
 
   return (
-    <div className="bg-white text-black border border-gray-200 mb-12 shadow-sm rounded-none">
+    <div className="glass-panel bg-[#EDEDE9]/70 border border-[#2b2522]/10 mb-12 shadow-xl rounded-2xl text-[#2b2522]">
       <div className="p-6 md:p-10">
         
         {/* Header Ribbon & Filters */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
           <div>
-            <h2 className="text-2xl font-black uppercase tracking-tighter">Gross Metrics</h2>
-            <p className="text-xs uppercase tracking-widest text-gray-500 mt-1">Operational Analytics Engine</p>
+            <h2 className="text-2xl font-black uppercase tracking-tighter text-[#2b2522]">Gross Metrics</h2>
+            <p className="text-xs uppercase tracking-widest text-[#6e625c] mt-1 font-bold">Operational Analytics Engine</p>
           </div>
           
-          <div className="flex bg-gray-100 p-1 border border-gray-200">
+          <div className="flex bg-[#F5EBE0]/60 p-1 border border-[#2b2522]/10 rounded-lg">
             {(['7D', '30D', 'YTD', 'ALL'] as const).map(filter => (
               <button
                 key={filter}
                 onClick={() => setTimeFilter(filter)}
-                className={`py-2 px-4 text-[10px] font-black uppercase tracking-widest transition-colors ${
+                className={`py-2 px-4 text-[10px] font-black uppercase tracking-widest transition-colors rounded ${
                   timeFilter === filter 
-                    ? 'bg-black text-white shadow-md' 
-                    : 'text-gray-500 hover:text-black hover:bg-white'
+                    ? 'bg-[#2b2522] text-[#F5EBE0] shadow-sm' 
+                    : 'text-[#6e625c] hover:text-[#2b2522] hover:bg-[#EDEDE9]/60'
                 }`}
               >
                 {filter === 'ALL' ? 'All-Time' : filter}
@@ -125,29 +125,29 @@ export default function FinancialDashboard({ orders }: { orders: Order[] }) {
         </div>
 
         {/* KPIs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 mb-10">
-          <div className="bg-white p-6 md:p-8 flex flex-col justify-center">
-            <span className="text-[10px] uppercase font-black tracking-widest text-gray-400 mb-2">Total Volume</span>
-            <span className="text-4xl md:text-5xl font-black tracking-tighter">
-              {stats.totalOrders} <span className="text-lg text-gray-300 font-bold uppercase tracking-widest">Orders</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          <div className="bg-[#F5EBE0]/60 border border-[#2b2522]/10 p-6 md:p-8 rounded-xl flex flex-col justify-center shadow-sm">
+            <span className="text-[10px] uppercase font-black tracking-widest text-[#6e625c] mb-2">Total Volume</span>
+            <span className="text-4xl md:text-5xl font-black tracking-tighter text-[#2b2522]">
+              {stats.totalOrders} <span className="text-lg text-[#6e625c]/50 font-bold uppercase tracking-widest">Orders</span>
             </span>
           </div>
-          <div className="bg-white p-6 md:p-8 flex flex-col justify-center">
-            <span className="text-[10px] uppercase font-black tracking-widest text-gray-400 mb-2">Gross Revenue</span>
-            <span className="text-4xl md:text-5xl font-black tracking-tighter text-blue-600">
+          <div className="bg-[#F5EBE0]/60 border border-[#2b2522]/10 p-6 md:p-8 rounded-xl flex flex-col justify-center shadow-sm">
+            <span className="text-[10px] uppercase font-black tracking-widest text-[#6e625c] mb-2">Gross Revenue</span>
+            <span className="text-4xl md:text-5xl font-black tracking-tighter text-[#2b2522]">
               ${stats.grossRevenue.toFixed(2)}
             </span>
           </div>
         </div>
 
         {/* CSS Chart */}
-        <div className="h-[250px] w-full flex items-end gap-1 px-2 border-b-2 border-black pb-4 relative mt-16 overflow-x-auto no-scrollbar pt-6">
+        <div className="h-[250px] w-full flex items-end gap-1.5 px-2 border-b border-[#2b2522]/20 pb-4 relative mt-16 overflow-x-auto no-scrollbar pt-6">
           {/* Y-Axis lines (optional decorative) */}
-          <div className="absolute inset-0 border-t border-gray-100 pointer-events-none" />
-          <div className="absolute inset-x-0 top-1/2 border-t border-gray-50 border-dashed pointer-events-none" />
+          <div className="absolute inset-0 border-t border-[#2b2522]/5 pointer-events-none" />
+          <div className="absolute inset-x-0 top-1/2 border-t border-[#2b2522]/5 border-dashed pointer-events-none" />
           
           {stats.chartArray.length === 0 ? (
-            <div className="w-full text-center text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">No data generated in this period</div>
+            <div className="w-full text-center text-xs uppercase tracking-widest text-[#6e625c] font-bold mb-4">No data generated in this period</div>
           ) : (
             stats.chartArray.map((bar, idx) => {
               const heightPercentage = (bar.value / stats.maxVal) * 100
@@ -157,18 +157,18 @@ export default function FinancialDashboard({ orders }: { orders: Order[] }) {
               return (
                 <div key={idx} className="flex-1 flex flex-col items-center justify-end h-full group min-w-[30px] relative z-10 cursor-crosshair">
                   {/* Tooltip Hover */}
-                  <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-black text-white text-[10px] font-black tracking-widest px-2 py-1 pointer-events-none z-20">
+                  <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap bg-[#2b2522] text-[#F5EBE0] text-[10px] font-black tracking-widest px-2.5 py-1 pointer-events-none z-20 rounded shadow-lg">
                     {bar.tooltip}
                   </div>
                   
                   {/* Main Column */}
                   <div 
-                    className="w-full bg-black hover:bg-blue-600 transition-colors duration-300 border-t-2 border-x border-black hover:border-blue-600"
+                    className="w-full bg-[#2b2522] hover:bg-[#D5BDAF] transition-colors duration-300 border-t border-x border-[#2b2522] hover:border-[#D5BDAF] rounded-t"
                     style={{ height: `${Math.max(heightPercentage, 1)}%`, minHeight: bar.value === 0 ? '0' : '4px' }}
                   />
                   
                   {/* X-Axis Label */}
-                  <span className={`text-[8px] uppercase tracking-wider font-bold text-gray-400 mt-2 truncate max-w-[90%] transform ${isDense ? '-rotate-45 -ml-2 origin-top-left' : ''}`}>
+                  <span className={`text-[8px] uppercase tracking-wider font-bold text-[#6e625c] mt-2 truncate max-w-[90%] transform ${isDense ? '-rotate-45 -ml-2 origin-top-left' : ''}`}>
                     {bar.label}
                   </span>
                 </div>

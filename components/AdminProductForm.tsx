@@ -69,9 +69,9 @@ export default function AdminProductForm({ categories }: { categories: Category[
   }
 
   return (
-    <div className="bg-black p-8 border border-white max-w-lg mx-auto mt-10">
-      <h2 className="text-white text-2xl font-bold mb-6 tracking-tighter uppercase">
-        Add New Art Print
+    <div className="glass-panel bg-[#EDEDE9]/70 border border-[#2b2522]/10 p-8 max-w-lg mx-auto mt-10 rounded-2xl shadow-xl text-[#2b2522]">
+      <h2 className="text-[#2b2522] text-2xl font-black mb-6 tracking-tighter uppercase">
+        Add New Software
       </h2>
       
       <form 
@@ -83,7 +83,7 @@ export default function AdminProductForm({ categories }: { categories: Category[
             alert(`Error: ${result.error}`)
             return
           }
-          alert("Product added successfully!")
+          alert("Software product added successfully!")
           formRef.current?.reset()
           setPreviews([])
           setImageUrls([])
@@ -91,23 +91,23 @@ export default function AdminProductForm({ categories }: { categories: Category[
         className="flex flex-col gap-6"
       >
         <div className="flex flex-col gap-2">
-          <label className="text-white text-xs uppercase tracking-widest">Title</label>
+          <label className="text-[#2b2522] text-xs uppercase tracking-widest font-bold">Title</label>
           <input 
             name="title" 
-            className="bg-transparent border-b border-white text-white p-2 outline-none focus:border-gray-500 transition-colors"
-            placeholder="E.g. Midnight in Tel Aviv"
+            className="bg-transparent border-b border-[#2b2522]/20 text-[#2b2522] p-2 outline-none focus:border-[#2b2522] transition-colors placeholder:text-[#6e625c]/30"
+            placeholder="E.g. StreamBox"
             required 
           />
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-white text-xs uppercase tracking-widest">Category Bucket</label>
+          <label className="text-[#2b2522] text-xs uppercase tracking-widest font-bold">Category Bucket</label>
           <select 
             name="category_id" 
             defaultValue=""
-            className="bg-black border-b border-white text-white p-2 outline-none focus:border-gray-500 transition-colors uppercase tracking-widest text-sm"
+            className="bg-[#EDEDE9]/90 border-b border-[#2b2522]/20 text-[#2b2522] p-2 outline-none focus:border-[#2b2522] transition-colors uppercase tracking-widest text-sm font-bold"
           >
-            <option value="" disabled>Select a Bucket</option>
+            <option value="" disabled>Select Category</option>
             {categories?.map((c) => (
               <option key={c.id} value={c.id}>{c.name}</option>
             ))}
@@ -115,25 +115,25 @@ export default function AdminProductForm({ categories }: { categories: Category[
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-white text-xs uppercase tracking-widest">Description</label>
+          <label className="text-[#2b2522] text-xs uppercase tracking-widest font-bold">Description</label>
           <input 
             name="description" 
-            className="bg-transparent border-b border-white text-white p-2 outline-none focus:border-gray-500 transition-colors"
-            placeholder="E.g. A beautiful night scene."
+            className="bg-transparent border-b border-[#2b2522]/20 text-[#2b2522] p-2 outline-none focus:border-[#2b2522] transition-colors placeholder:text-[#6e625c]/30"
+            placeholder="E.g. High-performance sports streaming dashboard."
           />
         </div>
 
         {/* Multi-Image Upload Zone */}
         <div className="flex flex-col gap-2">
-          <label className="text-white text-xs uppercase tracking-widest">Artwork Images</label>
+          <label className="text-[#2b2522] text-xs uppercase tracking-widest font-bold">Screenshots &amp; Logo</label>
           <div
             onDrop={handleDrop}
             onDragEnter={handleDrag}
             onDragOver={handleDrag}
             onDragLeave={handleDrag}
             onClick={() => document.getElementById('file-input')?.click()}
-            className={`border-2 border-dashed cursor-pointer transition-all duration-300 min-h-[140px] flex items-center justify-center relative overflow-hidden ${
-              dragActive ? 'border-white bg-white/10' : 'border-gray-600 hover:border-gray-400'
+            className={`border-2 border-dashed cursor-pointer transition-all duration-300 min-h-[140px] flex items-center justify-center relative overflow-hidden rounded-xl ${
+              dragActive ? 'border-[#2b2522] bg-[#2b2522]/5' : 'border-[#2b2522]/20 hover:border-[#2b2522]/60'
             }`}
           >
             <input
@@ -148,23 +148,23 @@ export default function AdminProductForm({ categories }: { categories: Category[
             {previews.length > 0 ? (
               <div className="p-4 grid grid-cols-3 gap-2 w-full">
                 {previews.map((preview, i) => (
-                  <div key={i} className="relative aspect-[3/4] bg-gray-900 border border-gray-700">
-                    <img src={preview} alt="Preview" className="w-full h-full object-cover" />
+                  <div key={i} className="relative aspect-[3/4] bg-[#F5EBE0] border border-[#2b2522]/10 rounded overflow-hidden">
+                    <img src={preview} alt="Preview" className="w-full h-full object-contain p-1" />
                   </div>
                 ))}
                 {uploading && (
-                  <div className="aspect-[3/4] border-2 border-dashed border-gray-600 flex items-center justify-center bg-black/50">
-                    <span className="text-white text-[9px] uppercase tracking-widest animate-pulse">Wait...</span>
+                  <div className="aspect-[3/4] border-2 border-dashed border-[#2b2522]/20 flex items-center justify-center bg-[#EDEDE9]/60 rounded animate-pulse">
+                    <span className="text-[#2b2522] text-[9px] uppercase tracking-widest">Uploading...</span>
                   </div>
                 )}
               </div>
             ) : (
               <div className="text-center p-8">
-                <div className="text-gray-500 text-3xl mb-3">↑</div>
-                <p className="text-gray-400 text-[10px] uppercase tracking-widest">
-                  Drop multiple images here
+                <div className="text-[#6e625c] text-3xl mb-3">↑</div>
+                <p className="text-[#6e625c] text-[10px] uppercase tracking-widest font-bold">
+                  Drop screenshot / logo here
                 </p>
-                {uploading && <p className="text-green-400 text-[10px] mt-2 animate-pulse uppercase tracking-widest">Uploading...</p>}
+                {uploading && <p className="text-[#2b2522] text-[10px] mt-2 animate-pulse uppercase tracking-widest font-black">Uploading...</p>}
               </div>
             )}
           </div>
@@ -173,13 +173,13 @@ export default function AdminProductForm({ categories }: { categories: Category[
         <input type="hidden" name="imageUrls" value={imageUrls.join(',')} />
 
         <div className="flex flex-col gap-2">
-          <label className="text-white text-xs uppercase tracking-widest">Price ($)</label>
+          <label className="text-[#2b2522] text-xs uppercase tracking-widest font-bold">Price ($)</label>
           <input 
             name="price" 
             type="number"
             step="0.01"
-            className="bg-transparent border-b border-white text-white p-2 outline-none"
-            placeholder="250.00"
+            className="bg-transparent border-b border-[#2b2522]/20 text-[#2b2522] p-2 outline-none focus:border-[#2b2522] transition-colors placeholder:text-[#6e625c]/30"
+            placeholder="19.00"
             required 
           />
         </div>
@@ -187,13 +187,13 @@ export default function AdminProductForm({ categories }: { categories: Category[
         <button 
           type="submit" 
           disabled={imageUrls.length === 0 || uploading}
-          className={`font-bold py-4 mt-4 transition-all uppercase text-sm tracking-widest ${
+          className={`font-black py-4 mt-4 transition-all uppercase text-sm tracking-widest rounded-xl shadow-md ${
             imageUrls.length === 0 || uploading
-              ? 'bg-gray-800 text-gray-500 cursor-not-allowed'
-              : 'bg-white text-black hover:bg-gray-200'
+              ? 'bg-[#EDEDE9]/80 text-[#6e625c]/40 cursor-not-allowed border border-[#2b2522]/10'
+              : 'btn-neon'
           }`}
         >
-          {uploading ? 'Processing Images...' : 'Publish to Gallery'}
+          {uploading ? 'Processing Images...' : 'Create Software Product'}
         </button>
       </form>
     </div>

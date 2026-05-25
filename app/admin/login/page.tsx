@@ -5,32 +5,32 @@ export default async function AdminLoginPage({ searchParams }: { searchParams: P
   const hasError = params?.error === '1'
 
   return (
-    <main className="min-h-screen bg-black flex items-center justify-center p-4 selection:bg-white selection:text-black">
+    <main className="min-h-screen bg-[#F5EBE0] flex items-center justify-center p-4 selection:bg-[#D5BDAF] selection:text-[#2b2522]">
       <div className="w-full max-w-md">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-black uppercase tracking-tighter text-white">
-            Frame &amp; Focus
+          <h1 className="text-4xl font-black uppercase tracking-tighter text-[#2b2522]">
+            Software MP
           </h1>
-          <p className="text-xs uppercase tracking-[0.35em] text-gray-500 mt-2">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#6e625c] mt-2">
             Restricted Access
           </p>
         </div>
 
-        <form action={loginAction} className="border border-gray-800 p-8">
+        <form action={loginAction} className="glass-panel bg-[#EDEDE9]/70 border border-[#2b2522]/10 p-8 rounded-2xl shadow-xl">
           {hasError && (
-            <div className="border border-red-500 text-red-400 text-xs uppercase tracking-widest text-center py-3 mb-6">
+            <div className="border border-red-300 text-red-700 text-xs uppercase tracking-widest text-center py-3 mb-6 bg-red-50/50">
               Invalid Password
             </div>
           )}
 
           <div className="flex flex-col gap-2 mb-8">
-            <label className="text-white text-xs uppercase tracking-widest">
+            <label className="text-[#2b2522] text-xs uppercase tracking-widest font-bold">
               Password
             </label>
             <input
               name="password"
               type="password"
-              className="bg-transparent border-b border-white text-white p-3 outline-none focus:border-gray-500 transition-colors text-lg tracking-wider"
+              className="bg-transparent border-b border-[#2b2522]/20 text-[#2b2522] p-3 outline-none focus:border-[#2b2522] transition-colors text-lg tracking-wider placeholder:text-[#6e625c]/30"
               placeholder="••••••••"
               required
               autoFocus
@@ -39,13 +39,13 @@ export default async function AdminLoginPage({ searchParams }: { searchParams: P
 
           <button
             type="submit"
-            className="w-full bg-white text-black font-black uppercase tracking-widest py-4 hover:bg-gray-200 transition-colors text-sm"
+            className="w-full btn-neon font-black uppercase tracking-widest py-4 rounded-xl text-sm transition-all"
           >
             Enter Dashboard
           </button>
         </form>
 
-        <p className="text-center text-gray-700 text-xs mt-6 uppercase tracking-widest">
+        <p className="text-center text-[#6e625c]/60 text-[10px] mt-6 uppercase tracking-widest font-bold">
           Authorized Personnel Only
         </p>
       </div>

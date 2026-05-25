@@ -76,22 +76,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             {/* Product Image Carousel */}
             <div className="w-full">
               <ProductCarousel images={product.image_urls || (product.image_url ? [product.image_url] : [])} altText={product.title} />
-              
-              {/* Added: Quick install command/terminal snippet for premium dev feel */}
-              <div className="mt-8 code-terminal p-5 rounded-xl shadow-lg font-mono text-xs text-[#f5ebe0]">
-                <div className="flex items-center justify-between border-b border-white/5 pb-2 mb-3 text-gray-500">
-                  <div className="flex gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-                  </div>
-                  <span>bash</span>
-                </div>
-                <p className="text-emerald-400"># Install & start {product.title.toLowerCase().replace(/\s+/g, '-')}</p>
-                <p className="mt-1"><span className="text-blue-400">git clone</span> {product.github_url || 'https://github.com/nathanellevy/repo.git'}</p>
-                <p className="mt-1"><span className="text-purple-400">cd</span> {product.title.toLowerCase().replace(/\s+/g, '-')}</p>
-                <p className="mt-1"><span className="text-yellow-400">npm install</span> &amp;&amp; <span className="text-yellow-400">npm run dev</span></p>
-              </div>
             </div>
 
             {/* Product Details */}
@@ -138,33 +122,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 </div>
               )}
 
-              {/* Added: External Link Actions */}
-              {(product.github_url || product.demo_url) && (
-                <div className="flex gap-3 mb-8">
-                  {product.github_url && (
-                    <a
-                      href={product.github_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex-1 btn-warm-secondary text-xs uppercase tracking-wider font-bold py-3 px-6 rounded-lg text-center flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
-                      GitHub Repo
-                    </a>
-                  )}
-                  {product.demo_url && (
-                    <a
-                      href={product.demo_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex-1 btn-warm-secondary text-xs uppercase tracking-wider font-bold py-3 px-6 rounded-lg text-center flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-                      Try Live Demo
-                    </a>
-                  )}
-                </div>
-              )}
+
 
               <ProductVariantSelector 
                 product={product} 
