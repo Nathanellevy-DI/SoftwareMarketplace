@@ -63,7 +63,7 @@ export async function POST(req: Request) {
           state_code: stateCode,
           country_code: 'US', // Printful needs valid 2-letter codes. Hardcoding US for MVP.
           zip,
-          email: order.customer_email || 'info@framefocus.com',
+          email: order.customer_email || 'info@softwaremp.com',
           phone: order.phone_number || undefined
         },
         items: printfulItems.map((item: any) => ({
