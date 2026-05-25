@@ -41,9 +41,11 @@ export default async function TrackingDetailPage({ params }: { params: Promise<{
       <div className="border-b border-[#2b2522]/10 bg-[#EDEDE9]/30 sticky top-0 backdrop-blur-md z-50">
         <div className="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#2b2522] text-[#F5EBE0] flex items-center justify-center font-black text-sm rounded-lg uppercase">
-              MP
-            </div>
+            <img 
+              src="/logo.png" 
+              className="w-8 h-8 object-cover bg-[#2b2522] rounded-lg shadow-sm border border-[#2b2522]/10" 
+              alt="Software MP Logo" 
+            />
             <span className="text-xl font-black uppercase tracking-tight text-[#2b2522]">
               Software MP
             </span>

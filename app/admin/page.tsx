@@ -57,9 +57,11 @@ export default async function AdminPage() {
         <header className="mb-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 bg-[#2b2522] text-[#F5EBE0] flex items-center justify-center font-black text-xl rounded-xl shadow-lg">
-                MP
-              </div>
+              <img 
+                src="/logo.png" 
+                className="w-14 h-14 object-cover bg-[#2b2522] rounded-xl shadow-lg border border-[#2b2522]/10" 
+                alt="Software MP Logo" 
+              />
               <div>
                 <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-[#2b2522]">
                   Software MP
@@ -75,6 +77,7 @@ export default async function AdminPage() {
               </button>
             </form>
           </div>
+        </header>
 
           {/* Quick Stats Strip */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

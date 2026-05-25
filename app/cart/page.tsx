@@ -65,9 +65,11 @@ export default function CartPage() {
             ← Continue Browsing
           </Link>
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#2b2522] text-[#F5EBE0] flex items-center justify-center font-black text-sm rounded-lg uppercase">
-              MP
-            </div>
+            <img 
+              src="/logo.png" 
+              className="w-8 h-8 object-cover bg-[#2b2522] rounded-lg shadow-sm border border-[#2b2522]/10" 
+              alt="Software MP Logo" 
+            />
             <span className="text-xl font-black uppercase tracking-tight text-[#2b2522]">
               Software MP
             </span>

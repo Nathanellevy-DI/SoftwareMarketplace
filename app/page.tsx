@@ -36,9 +36,11 @@ export default async function ShopPage() {
     <main className="min-h-screen bg-[#F5EBE0] text-[#2b2522] p-8 md:p-16 selection:bg-[#D5BDAF] selection:text-[#2b2522]">
       <header className="mb-20 border-b border-[#2b2522]/10 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div className="flex items-center gap-6 md:gap-8">
-          <div className="w-16 h-16 md:w-20 md:h-20 bg-[#2b2522] text-[#F5EBE0] flex items-center justify-center font-black text-2xl md:text-3xl rounded-xl shadow-md uppercase">
-            MP
-          </div>
+          <img 
+            src="/logo.png" 
+            className="w-16 h-16 md:w-20 md:h-20 object-cover bg-[#2b2522] rounded-xl shadow-md border border-[#2b2522]/10" 
+            alt="Software MP Logo" 
+          />
           <div>
             <h1 className="text-4xl md:text-7xl font-black uppercase tracking-tight text-[#2b2522]">
               Software MP
