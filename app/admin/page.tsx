@@ -103,7 +103,6 @@ export default async function AdminPage() {
               </div>
             </div>
           </div>
-        </header>
 
         {/* Tab Content Area */}
         <div className="mt-4">
