@@ -1,0 +1,549 @@
+
+> custom-prints-website@0.1.0 dev
+> next dev -p 3005
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3005
+- Network:       http://192.168.1.64:3005
+- Environments: .env.local
+✓ Ready in 205ms
+
+ GET /admin/login 200 in 126ms (next.js: 32ms, proxy.ts: 1634µs, application-code: 91ms)
+ GET /admin/login?error=1 200 in 20ms (next.js: 1194µs, proxy.ts: 1383µs, application-code: 18ms)
+ POST /admin/login 303 in 38ms (next.js: 3ms, proxy.ts: 3ms, application-code: 31ms)
+  └─ ƒ loginAction({}) in 0ms app/admin/auth-actions.ts
+ GET /admin/login?error=1 200 in 16ms (next.js: 1542µs, proxy.ts: 1439µs, application-code: 13ms)
+ POST /admin/login?error=1 303 in 27ms (next.js: 1656µs, proxy.ts: 3ms, application-code: 22ms)
+  └─ ƒ loginAction({}) in 0ms app/admin/auth-actions.ts
+ GET /admin/login?error=1 200 in 20ms (next.js: 2ms, proxy.ts: 1509µs, application-code: 16ms)
+ POST /admin/login?error=1 303 in 34ms (next.js: 1757µs, proxy.ts: 5ms, application-code: 27ms)
+  └─ ƒ loginAction({}) in 0ms app/admin/auth-actions.ts
+ GET /admin/login?error=1 200 in 17ms (next.js: 1480µs, proxy.ts: 1727µs, application-code: 14ms)
+ POST /admin/login?error=1 303 in 31ms (next.js: 2ms, proxy.ts: 5ms, application-code: 25ms)
+  └─ ƒ loginAction({}) in 0ms app/admin/auth-actions.ts
+ GET /admin 200 in 2.6s (next.js: 44ms, proxy.ts: 1739µs, application-code: 2.6s)
+ POST /admin/login?error=1 303 in 2.6s (next.js: 2ms, proxy.ts: 5ms, application-code: 2.6s)
+  └─ ƒ loginAction({}) in 2ms app/admin/auth-actions.ts
+ POST /api/printful/sync 200 in 5.6s (next.js: 143ms, application-code: 5.5s)
+ GET /admin 200 in 1464ms (next.js: 2ms, proxy.ts: 3ms, application-code: 1459ms)
+ POST /api/printful/sync 200 in 5.6s (next.js: 4ms, application-code: 5.6s)
+ GET /admin 200 in 1430ms (next.js: 2ms, proxy.ts: 5ms, application-code: 1423ms)
+ GET /admin 200 in 164ms (next.js: 66ms, proxy.ts: 24ms, application-code: 74ms)
+ GET /admin 200 in 42ms (next.js: 936µs, proxy.ts: 3ms, application-code: 39ms)
+ GET /admin 200 in 27ms (next.js: 1068µs, proxy.ts: 3ms, application-code: 23ms)
+ GET /admin 200 in 144ms (next.js: 49ms, proxy.ts: 21ms, application-code: 74ms)
+ GET /admin 200 in 45ms (next.js: 953µs, proxy.ts: 3ms, application-code: 42ms)
+ GET /admin 200 in 29ms (next.js: 946µs, proxy.ts: 2ms, application-code: 26ms)
+ GET /admin 200 in 1909ms (next.js: 3ms, proxy.ts: 4ms, application-code: 1902ms)
+ GET /admin 200 in 1418ms (next.js: 3ms, proxy.ts: 4ms, application-code: 1411ms)
+ POST /api/printful/sync 200 in 5.5s (next.js: 46ms, application-code: 5.4s)
+ GET /admin 200 in 1292ms (next.js: 1496µs, proxy.ts: 2ms, application-code: 1289ms)
+ GET /admin 200 in 1782ms (next.js: 4ms, proxy.ts: 4ms, application-code: 1774ms)
+ POST /api/printful/sync 200 in 5.6s (next.js: 3ms, application-code: 5.6s)
+ GET /admin 200 in 1384ms (next.js: 1067µs, proxy.ts: 2ms, application-code: 1381ms)
+✓ Compiled in 24ms
+ GET / 200 in 1504ms (next.js: 32ms, application-code: 1472ms)
+ GET /track 200 in 451ms (next.js: 437ms, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 1143ms (next.js: 421ms, application-code: 721ms)
+ POST /track 303 in 1158ms (next.js: 5ms, application-code: 1153ms)
+  └─ ƒ <inline action>({}) in 0ms app/track/page.tsx
+✓ Compiled in 29ms
+ GET /admin 200 in 48ms (next.js: 18ms, proxy.ts: 1610µs, application-code: 29ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 632ms (next.js: 4ms, application-code: 628ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 404 in 530ms (next.js: 6ms, application-code: 524ms)
+✓ Compiled in 68ms
+ GET /admin 200 in 247ms (next.js: 75ms, proxy.ts: 31ms, application-code: 141ms)
+ GET /admin 200 in 85ms (next.js: 3ms, proxy.ts: 4ms, application-code: 78ms)
+ GET /admin 200 in 45ms (next.js: 1688µs, proxy.ts: 3ms, application-code: 41ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 1056ms (next.js: 114ms, application-code: 942ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 881ms (next.js: 14ms, application-code: 867ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 920ms (next.js: 16ms, application-code: 904ms)
+ GET /track 200 in 84ms (next.js: 25ms, application-code: 59ms)
+ GET /track?email=nathanellevydi%40gmail.com 200 in 794ms (next.js: 1435µs, application-code: 792ms)
+ POST /track 303 in 806ms (next.js: 2ms, application-code: 803ms)
+  └─ ƒ <inline action>({}) in 0ms app/track/page.tsx
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 523ms (next.js: 5ms, application-code: 518ms)
+✓ Compiled in 10ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 50ms (next.js: 26ms, application-code: 24ms)
+ GET /admin 200 in 62ms (next.js: 17ms, proxy.ts: 4ms, application-code: 40ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 576ms (next.js: 1991µs, application-code: 574ms)
+✓ Compiled in 382ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 44ms (next.js: 24ms, application-code: 21ms)
+ GET /admin 200 in 164ms (next.js: 50ms, proxy.ts: 20ms, application-code: 94ms)
+ GET /admin 200 in 40ms (next.js: 1018µs, proxy.ts: 1498µs, application-code: 37ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 18ms (next.js: 829µs, application-code: 18ms)
+ GET /admin 200 in 25ms (next.js: 1184µs, proxy.ts: 1441µs, application-code: 23ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 538ms (next.js: 82ms, application-code: 456ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 20ms (next.js: 3ms, application-code: 17ms)
+ GET /admin 200 in 30ms (next.js: 1232µs, proxy.ts: 1619µs, application-code: 28ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 419ms (next.js: 1904µs, application-code: 417ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 794µs, application-code: 14ms)
+ GET /admin 200 in 26ms (next.js: 1555µs, proxy.ts: 1734µs, application-code: 22ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 1253ms (next.js: 436ms, application-code: 817ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 1255ms (next.js: 445ms, application-code: 810ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 36ms (next.js: 2ms, application-code: 34ms)
+ GET /admin 200 in 56ms (next.js: 1347µs, proxy.ts: 15ms, application-code: 40ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 16ms (next.js: 1866µs, application-code: 14ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 669ms (next.js: 1143µs, application-code: 668ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 259ms (next.js: 860µs, application-code: 258ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 15ms (next.js: 970µs, application-code: 14ms)
+ GET /admin 200 in 109ms (next.js: 2ms, proxy.ts: 1527µs, application-code: 105ms)
+ GET /admin 200 in 39ms (next.js: 913µs, proxy.ts: 1539µs, application-code: 37ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 264ms (next.js: 831µs, application-code: 263ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 21ms (next.js: 990µs, application-code: 20ms)
+ GET /admin 200 in 49ms (next.js: 1174µs, proxy.ts: 1327µs, application-code: 47ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 254ms (next.js: 939µs, application-code: 253ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 33ms (next.js: 2ms, application-code: 30ms)
+ GET /admin 200 in 37ms (next.js: 929µs, proxy.ts: 1321µs, application-code: 34ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 869µs, application-code: 13ms)
+ GET /admin 200 in 26ms (next.js: 979µs, proxy.ts: 1478µs, application-code: 23ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 272ms (next.js: 8ms, application-code: 264ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 29ms (next.js: 6ms, application-code: 23ms)
+ GET /admin 200 in 1731ms (next.js: 398ms, proxy.ts: 31ms, application-code: 1302ms)
+ GET /admin 200 in 36ms (next.js: 1414µs, proxy.ts: 1559µs, application-code: 33ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 827µs, application-code: 12ms)
+ GET /admin 200 in 24ms (next.js: 758µs, proxy.ts: 1026µs, application-code: 22ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 254ms (next.js: 1377µs, application-code: 253ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 15ms (next.js: 1915µs, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 241ms (next.js: 2ms, application-code: 239ms)
+ GET /admin 200 in 43ms (next.js: 931µs, proxy.ts: 1327µs, application-code: 41ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 25ms (next.js: 898µs, application-code: 24ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 253ms (next.js: 896µs, application-code: 252ms)
+ GET /admin 200 in 43ms (next.js: 1063µs, proxy.ts: 1201µs, application-code: 40ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 944µs, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 501ms (next.js: 1023µs, application-code: 500ms)
+ GET /admin 200 in 63ms (next.js: 1226µs, proxy.ts: 1791µs, application-code: 60ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 19ms (next.js: 1634µs, application-code: 17ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 271ms (next.js: 1087µs, application-code: 270ms)
+ GET /admin 200 in 45ms (next.js: 854µs, proxy.ts: 1403µs, application-code: 43ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 883µs, application-code: 12ms)
+ GET /admin 200 in 24ms (next.js: 807µs, proxy.ts: 1171µs, application-code: 22ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 255ms (next.js: 943µs, application-code: 254ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 15ms (next.js: 1067µs, application-code: 14ms)
+ GET /admin 200 in 32ms (next.js: 931µs, proxy.ts: 1251µs, application-code: 30ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 502ms (next.js: 971µs, application-code: 501ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 278ms (next.js: 1191µs, application-code: 277ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 22ms (next.js: 939µs, application-code: 21ms)
+ GET /admin 200 in 39ms (next.js: 2ms, proxy.ts: 1147µs, application-code: 35ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 849µs, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 497ms (next.js: 845µs, application-code: 496ms)
+ GET /admin 200 in 29ms (next.js: 915µs, proxy.ts: 1201µs, application-code: 27ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 901µs, application-code: 12ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 268ms (next.js: 808µs, application-code: 267ms)
+ GET /admin 200 in 42ms (next.js: 855µs, proxy.ts: 1506µs, application-code: 39ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 965µs, application-code: 12ms)
+ GET /admin 200 in 24ms (next.js: 929µs, proxy.ts: 1349µs, application-code: 22ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 242ms (next.js: 820µs, application-code: 241ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 905µs, application-code: 12ms)
+ GET /admin 200 in 22ms (next.js: 770µs, proxy.ts: 1492µs, application-code: 20ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 251ms (next.js: 1682µs, application-code: 250ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 17ms (next.js: 1563µs, application-code: 15ms)
+ GET /admin 200 in 32ms (next.js: 938µs, proxy.ts: 1125µs, application-code: 30ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 269ms (next.js: 1520µs, application-code: 268ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 549ms (next.js: 1947µs, application-code: 547ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 258ms (next.js: 789µs, application-code: 257ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 48ms (next.js: 705µs, application-code: 47ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 823µs, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 249ms (next.js: 997µs, application-code: 248ms)
+ GET /admin 200 in 103ms (next.js: 13ms, proxy.ts: 1445µs, application-code: 89ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 19ms (next.js: 1074µs, application-code: 18ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 254ms (next.js: 1654µs, application-code: 252ms)
+ GET /admin 200 in 93ms (next.js: 1015µs, proxy.ts: 1323µs, application-code: 90ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 859µs, application-code: 12ms)
+ GET /admin 200 in 69ms (next.js: 1019µs, proxy.ts: 1317µs, application-code: 67ms)
+ GET /admin 200 in 36ms (next.js: 1087µs, proxy.ts: 1216µs, application-code: 34ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 256ms (next.js: 2ms, application-code: 253ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 20ms (next.js: 1007µs, application-code: 19ms)
+ GET /admin 200 in 42ms (next.js: 1503µs, proxy.ts: 1790µs, application-code: 39ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 251ms (next.js: 1252µs, application-code: 250ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 33ms (next.js: 865µs, application-code: 32ms)
+ GET /admin 200 in 36ms (next.js: 982µs, proxy.ts: 1363µs, application-code: 34ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 252ms (next.js: 1046µs, application-code: 251ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 18ms (next.js: 1212µs, application-code: 17ms)
+ GET /admin 200 in 39ms (next.js: 1485µs, proxy.ts: 1595µs, application-code: 36ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 253ms (next.js: 1852µs, application-code: 251ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 18ms (next.js: 808µs, application-code: 17ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 245ms (next.js: 1137µs, application-code: 244ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 15ms (next.js: 790µs, application-code: 14ms)
+ GET /admin 200 in 76ms (next.js: 1234µs, proxy.ts: 1392µs, application-code: 74ms)
+ GET /admin 200 in 38ms (next.js: 908µs, proxy.ts: 1410µs, application-code: 36ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 249ms (next.js: 958µs, application-code: 248ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 31ms (next.js: 887µs, application-code: 30ms)
+ GET /admin 200 in 48ms (next.js: 1207µs, proxy.ts: 12ms, application-code: 34ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 259ms (next.js: 908µs, application-code: 258ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 34ms (next.js: 931µs, application-code: 33ms)
+ GET /admin 200 in 36ms (next.js: 975µs, proxy.ts: 1393µs, application-code: 34ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 801µs, application-code: 12ms)
+ GET /admin 200 in 25ms (next.js: 931µs, proxy.ts: 1433µs, application-code: 23ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 469ms (next.js: 1772µs, application-code: 467ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 382ms (next.js: 1018µs, application-code: 380ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 435ms (next.js: 900µs, application-code: 435ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 273ms (next.js: 1991µs, application-code: 271ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 330ms (next.js: 831µs, application-code: 329ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 88ms (next.js: 2ms, application-code: 86ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 276ms (next.js: 1113µs, application-code: 275ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 93ms (next.js: 19ms, application-code: 74ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 44ms (next.js: 14ms, application-code: 29ms)
+ GET /admin 200 in 142ms (next.js: 12ms, proxy.ts: 3ms, application-code: 127ms)
+ GET /admin 200 in 92ms (next.js: 1612µs, proxy.ts: 12ms, application-code: 78ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 30ms (next.js: 839µs, application-code: 29ms)
+ GET /admin 200 in 72ms (next.js: 965µs, proxy.ts: 1765µs, application-code: 69ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 1619µs, application-code: 12ms)
+ GET /admin 200 in 48ms (next.js: 883µs, proxy.ts: 1547µs, application-code: 45ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 241ms (next.js: 863µs, application-code: 240ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 826µs, application-code: 12ms)
+ GET /admin 200 in 50ms (next.js: 823µs, proxy.ts: 1246µs, application-code: 48ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 239ms (next.js: 1850µs, application-code: 237ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 21ms (next.js: 1426µs, application-code: 20ms)
+ GET /admin 200 in 52ms (next.js: 840µs, proxy.ts: 1314µs, application-code: 50ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 252ms (next.js: 1722µs, application-code: 250ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 905µs, application-code: 12ms)
+ GET /admin 200 in 61ms (next.js: 1559µs, proxy.ts: 12ms, application-code: 48ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 256ms (next.js: 1042µs, application-code: 255ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 1598µs, application-code: 12ms)
+ GET /admin 200 in 52ms (next.js: 932µs, proxy.ts: 1301µs, application-code: 50ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 259ms (next.js: 854µs, application-code: 259ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 973µs, application-code: 12ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 239ms (next.js: 840µs, application-code: 238ms)
+ GET /admin 200 in 74ms (next.js: 774µs, proxy.ts: 1235µs, application-code: 72ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 905µs, application-code: 12ms)
+ GET /admin 200 in 51ms (next.js: 817µs, proxy.ts: 1359µs, application-code: 49ms)
+ GET /admin 200 in 23ms (next.js: 773µs, proxy.ts: 1029µs, application-code: 21ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 12ms (next.js: 805µs, application-code: 12ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 268ms (next.js: 859µs, application-code: 267ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 335ms (next.js: 917µs, application-code: 334ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 240ms (next.js: 909µs, application-code: 239ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 26ms (next.js: 1751µs, application-code: 25ms)
+ GET /admin 200 in 71ms (next.js: 3ms, proxy.ts: 1205µs, application-code: 66ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 973µs, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 262ms (next.js: 1213µs, application-code: 261ms)
+ GET /admin 200 in 53ms (next.js: 909µs, proxy.ts: 1392µs, application-code: 50ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 252ms (next.js: 834µs, application-code: 251ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 35ms (next.js: 1510µs, application-code: 34ms)
+ GET /admin 200 in 73ms (next.js: 1341µs, proxy.ts: 1559µs, application-code: 70ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 247ms (next.js: 949µs, application-code: 246ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 29ms (next.js: 831µs, application-code: 28ms)
+ GET /admin 200 in 69ms (next.js: 1037µs, proxy.ts: 1414µs, application-code: 66ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 1742µs, application-code: 12ms)
+ GET /admin 200 in 47ms (next.js: 989µs, proxy.ts: 1308µs, application-code: 45ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 245ms (next.js: 831µs, application-code: 244ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 842µs, application-code: 13ms)
+ GET /admin 200 in 56ms (next.js: 790µs, proxy.ts: 1276µs, application-code: 54ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 244ms (next.js: 1283µs, application-code: 243ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 881µs, application-code: 12ms)
+ GET /admin 200 in 49ms (next.js: 822µs, proxy.ts: 1314µs, application-code: 47ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 243ms (next.js: 872µs, application-code: 242ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 14ms (next.js: 1129µs, application-code: 13ms)
+ GET /admin 200 in 61ms (next.js: 1147µs, proxy.ts: 1457µs, application-code: 58ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 252ms (next.js: 1710µs, application-code: 250ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 15ms (next.js: 1926µs, application-code: 13ms)
+ GET /admin 200 in 54ms (next.js: 799µs, proxy.ts: 1192µs, application-code: 52ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 259ms (next.js: 762µs, application-code: 258ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 19ms (next.js: 918µs, application-code: 18ms)
+ GET /admin 200 in 57ms (next.js: 1188µs, proxy.ts: 1297µs, application-code: 55ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 258ms (next.js: 911µs, application-code: 257ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 20ms (next.js: 830µs, application-code: 19ms)
+ GET /admin 200 in 58ms (next.js: 943µs, proxy.ts: 1325µs, application-code: 55ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 269ms (next.js: 908µs, application-code: 268ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 16ms (next.js: 1052µs, application-code: 15ms)
+ GET /admin 200 in 49ms (next.js: 1088µs, proxy.ts: 1959µs, application-code: 46ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 247ms (next.js: 1433µs, application-code: 246ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 244ms (next.js: 844µs, application-code: 244ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 243ms (next.js: 972µs, application-code: 242ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 272ms (next.js: 942µs, application-code: 271ms)
+✓ Compiled in 25ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 50ms (next.js: 17ms, application-code: 33ms)
+ GET /admin 200 in 66ms (next.js: 30ms, proxy.ts: 3ms, application-code: 33ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 355ms (next.js: 3ms, application-code: 352ms)
+✓ Compiled in 36ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 37ms (next.js: 9ms, application-code: 28ms)
+ GET /admin 200 in 66ms (next.js: 19ms, proxy.ts: 3ms, application-code: 45ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 293ms (next.js: 2ms, application-code: 291ms)
+Error inserting product: {
+  code: '23502',
+  details: 'Failing row contains (b9618fe2-b23d-4fc2-b1eb-3f246d222a04, 2026-03-27 15:51:53.069041+00, New York City Grand Central Station PostCard, null, 50.00, null, Print, t, 211ffddc-aaea-49d5-973b-9cd4512f742a, {NULL}).',
+  hint: null,
+  message: 'null value in column "image_url" of relation "products" violates not-null constraint'
+}
+ POST /api/printful/sync 200 in 6.5s (next.js: 49ms, application-code: 6.4s)
+ GET /admin 200 in 1463ms (next.js: 3ms, proxy.ts: 6ms, application-code: 1454ms)
+Error inserting product: {
+  code: '23502',
+  details: 'Failing row contains (14feef65-7710-41d3-9c94-e081d6b6cb31, 2026-03-27 16:00:11.948766+00, New York City Grand Central Station PostCard, null, 50.00, null, Print, t, 211ffddc-aaea-49d5-973b-9cd4512f742a, {https://files.cdn.printful.com/files/0bf/0bf2ef97412a6785dc8981...).',
+  hint: null,
+  message: 'null value in column "image_url" of relation "products" violates not-null constraint'
+}
+Error inserting product: {
+  code: '23502',
+  details: 'Failing row contains (ac069eb8-d722-4b23-b4b9-deac3b9a53ac, 2026-03-27 16:00:12.50523+00, The Vessel Jigsaw Puzzle, null, 50.00, null, Print, t, 211ffddc-aaea-49d5-973b-9cd4512f742a, {https://files.cdn.printful.com/files/bec/bec98a8264932838456268...).',
+  hint: null,
+  message: 'null value in column "image_url" of relation "products" violates not-null constraint'
+}
+ POST /api/printful/sync 200 in 5.8s (next.js: 1517µs, application-code: 5.8s)
+ POST /api/printful/sync 200 in 7.8s (next.js: 37ms, application-code: 7.8s)
+  Reload env: .env.local
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 163ms (next.js: 70ms, application-code: 93ms)
+ GET /admin 200 in 196ms (next.js: 140ms, proxy.ts: 25ms, application-code: 31ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 1372ms (next.js: 89ms, application-code: 1283ms)
+✓ Compiled in 42ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 175ms (next.js: 76ms, application-code: 100ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 43ms (next.js: 12ms, application-code: 32ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 12ms (next.js: 808µs, application-code: 12ms)
+ GET /admin 200 in 212ms (next.js: 40ms, proxy.ts: 76ms, application-code: 97ms)
+ GET /admin 200 in 110ms (next.js: 15ms, proxy.ts: 14ms, application-code: 82ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 15ms (next.js: 1955µs, application-code: 13ms)
+ GET /admin 200 in 67ms (next.js: 1267µs, proxy.ts: 1691µs, application-code: 64ms)
+ GET /admin 200 in 24ms (next.js: 971µs, proxy.ts: 1483µs, application-code: 22ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 466ms (next.js: 34ms, application-code: 432ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 676ms (next.js: 1291µs, application-code: 674ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 807ms (next.js: 2ms, application-code: 804ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 713ms (next.js: 3ms, application-code: 710ms)
+✓ Compiled in 45ms
+✓ Compiled in 153ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 148ms (next.js: 29ms, application-code: 119ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 34ms (next.js: 1404µs, application-code: 33ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 23ms (next.js: 9ms, application-code: 14ms)
+ GET /admin 200 in 200ms (next.js: 85ms, proxy.ts: 23ms, application-code: 92ms)
+ GET /admin 200 in 64ms (next.js: 13ms, proxy.ts: 1559µs, application-code: 49ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 19ms (next.js: 1971µs, application-code: 17ms)
+ GET /admin 200 in 89ms (next.js: 1727µs, proxy.ts: 1462µs, application-code: 85ms)
+ GET /admin 200 in 50ms (next.js: 1128µs, proxy.ts: 1387µs, application-code: 47ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 834µs, application-code: 12ms)
+ GET /admin 200 in 22ms (next.js: 1015µs, proxy.ts: 1360µs, application-code: 19ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 647ms (next.js: 42ms, application-code: 604ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 519ms (next.js: 47ms, application-code: 472ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 413ms (next.js: 884µs, application-code: 412ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 406ms (next.js: 13ms, application-code: 393ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 675ms (next.js: 801µs, application-code: 675ms)
+✓ Compiled in 59ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 155ms (next.js: 41ms, application-code: 114ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 41ms (next.js: 1230µs, application-code: 40ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 22ms (next.js: 681µs, application-code: 22ms)
+ GET /admin 200 in 205ms (next.js: 100ms, proxy.ts: 22ms, application-code: 83ms)
+ GET /admin 200 in 70ms (next.js: 28ms, proxy.ts: 1489µs, application-code: 41ms)
+ GET /admin 200 in 21ms (next.js: 1304µs, proxy.ts: 1670µs, application-code: 18ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 442ms (next.js: 53ms, application-code: 389ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 330ms (next.js: 15ms, application-code: 316ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 293ms (next.js: 3ms, application-code: 291ms)
+✓ Compiled in 40ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 157ms (next.js: 92ms, application-code: 64ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 36ms (next.js: 14ms, application-code: 22ms)
+ GET /admin 200 in 208ms (next.js: 50ms, proxy.ts: 22ms, application-code: 136ms)
+ GET /admin 200 in 68ms (next.js: 8ms, proxy.ts: 2ms, application-code: 57ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 840µs, application-code: 12ms)
+ GET /admin 200 in 32ms (next.js: 1136µs, proxy.ts: 1228µs, application-code: 30ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 368ms (next.js: 85ms, application-code: 283ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 254ms (next.js: 967µs, application-code: 253ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 223ms (next.js: 798µs, application-code: 222ms)
+✓ Compiled in 32ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 133ms (next.js: 73ms, application-code: 60ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 33ms (next.js: 11ms, application-code: 22ms)
+ GET /admin 200 in 209ms (next.js: 72ms, proxy.ts: 19ms, application-code: 118ms)
+ GET /admin 200 in 97ms (next.js: 10ms, proxy.ts: 1681µs, application-code: 85ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 13ms (next.js: 1123µs, application-code: 12ms)
+ GET /admin 200 in 52ms (next.js: 1538µs, proxy.ts: 1930µs, application-code: 48ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 618ms (next.js: 1057µs, application-code: 617ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 573ms (next.js: 985µs, application-code: 572ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 711ms (next.js: 30ms, application-code: 681ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 79ms (next.js: 25ms, application-code: 55ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 36ms (next.js: 886µs, application-code: 35ms)
+ GET /admin 200 in 214ms (next.js: 50ms, proxy.ts: 19ms, application-code: 145ms)
+ GET /admin 200 in 82ms (next.js: 1605µs, proxy.ts: 5ms, application-code: 75ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 17ms (next.js: 1236µs, application-code: 16ms)
+ GET /admin 200 in 50ms (next.js: 1129µs, proxy.ts: 1436µs, application-code: 48ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 558ms (next.js: 87ms, application-code: 472ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 427ms (next.js: 929µs, application-code: 426ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 379ms (next.js: 726µs, application-code: 378ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 17ms
+ GET /admin 200 in 2.1s (next.js: 2ms, proxy.ts: 1572µs, application-code: 2.1s)
+ GET / 200 in 1681ms (next.js: 14ms, application-code: 1667ms)
+ GET /admin 200 in 1708ms (next.js: 3ms, proxy.ts: 2ms, application-code: 1703ms)
+ GET /admin 200 in 1746ms (next.js: 3ms, proxy.ts: 4ms, application-code: 1739ms)
+ POST /admin 200 in 1882ms (next.js: 3ms, proxy.ts: 6ms, application-code: 1873ms)
+  └─ ƒ toggleProductAvailability("1d264878-710a-45c6-a9f5-49c5fe701e7f", false) in 284ms app/admin/product-actions.ts
+ POST /api/upload 200 in 1761ms (next.js: 96ms, application-code: 1665ms)
+ POST /admin 200 in 1978ms (next.js: 3ms, proxy.ts: 3ms, application-code: 1972ms)
+  └─ ƒ addProductImage("1d264878-710a-45c6-a9f5-49c5fe701e7f", "https://czdhymqvepshaysyyoed.supabase.co/storage/v1/object/public/product-images/bfb9674a-ff4a-4613-9e6b-cb9b2d2298e3.webp") in 472ms app/admin/product-actions.ts
+ POST /api/upload 200 in 855ms (next.js: 3ms, application-code: 852ms)
+ POST /admin 200 in 1963ms (next.js: 3ms, proxy.ts: 5ms, application-code: 1956ms)
+  └─ ƒ addProductImage("1d264878-710a-45c6-a9f5-49c5fe701e7f", "https://czdhymqvepshaysyyoed.supabase.co/storage/v1/object/public/product-images/45fb7d8d-b338-4c64-bb02-d471ba9bbe40.webp") in 479ms app/admin/product-actions.ts
+ POST /api/upload 200 in 691ms (next.js: 3ms, application-code: 689ms)
+ POST /admin 200 in 2.2s (next.js: 4ms, proxy.ts: 4ms, application-code: 2.2s)
+  └─ ƒ addProductImage("1d264878-710a-45c6-a9f5-49c5fe701e7f", "https://czdhymqvepshaysyyoed.supabase.co/storage/v1/object/public/product-images/d86eeae7-63f3-42c2-8c52-f8d819116207.webp") in 514ms app/admin/product-actions.ts
+ POST /admin 200 in 1839ms (next.js: 5ms, proxy.ts: 4ms, application-code: 1831ms)
+  └─ ƒ updateProduct("1d264878-710a-45c6-a9f5-49c5fe701e7f", {}) in 277ms app/admin/product-actions.ts
+ POST /admin 200 in 1882ms (next.js: 3ms, proxy.ts: 4ms, application-code: 1874ms)
+  └─ ƒ updateProduct("1d264878-710a-45c6-a9f5-49c5fe701e7f", {}) in 269ms app/admin/product-actions.ts
+ POST /admin 200 in 2.9s (next.js: 4ms, proxy.ts: 3ms, application-code: 2.9s)
+  └─ ƒ renameCategory("d889f46f-1122-4f44-9bce-990332969cba", "PostCard") in 931ms app/admin/category-actions.ts
+ GET / 200 in 1347ms (next.js: 2ms, application-code: 1345ms)
+ GET /product/084d6c38-a3e2-416d-9928-6cbd2d428f1b 200 in 557ms (next.js: 269ms, application-code: 288ms)
+ GET /product/9623b153-c41b-4db7-88a6-56fc584c50e2 200 in 636ms (next.js: 1767µs, application-code: 634ms)
+ GET /cart 200 in 30ms (next.js: 20ms, application-code: 10ms)
+📧 Sending Order Received email to: nathanellevi8@gmail.com
+❌ Resend Error (Order Received): {"statusCode":403,"name":"validation_error","message":"You can only send testing emails to your own email address (nathanellevydi@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."}
+ POST /api/checkout-cart 200 in 2.1s (next.js: 221ms, application-code: 1867ms)
+✓ Compiled in 21ms
+✓ Compiled in 108ms
+[browser] ./components/CategoryManager.tsx:116:18
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  114 |                     )}
+  115 |                   </div>
+> 116 |                 )}
+      |                  ^
+  117 |               </div>
+  118 |             )}
+  119 |           </div>
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./components/CategoryManager.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/CategoryManager.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component] 
+    at handleErrors (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/CategoryManager.tsx:116:18
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  114 |                     )}
+  115 |                   </div>
+> 116 |                 )}
+      |                  ^
+  117 |               </div>
+  118 |             )}
+  119 |           </div>
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./components/CategoryManager.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/CategoryManager.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component] 
+    at handleErrors (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/CategoryManager.tsx:116:18
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  114 |                     )}
+  115 |                   </div>
+> 116 |                 )}
+      |                  ^
+  117 |               </div>
+  118 |             )}
+  119 |           </div>
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./components/CategoryManager.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/CategoryManager.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component] 
+    at handleErrors (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/CategoryManager.tsx:116:18
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  114 |                     )}
+  115 |                   </div>
+> 116 |                 )}
+      |                  ^
+  117 |               </div>
+  118 |             )}
+  119 |           </div>
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./components/CategoryManager.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Client Component Browser]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/CategoryManager.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Client Component SSR]
+    ./components/AdminTabs.tsx [Server Component]
+    ./app/admin/page.tsx [Server Component] 
+    at handleErrors (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file:///Users/nathanellevy/Desktop/Custom Prints Websitw /.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+✓ Compiled in 15ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 77ms (next.js: 22ms, application-code: 55ms)
+ GET /admin 200 in 87ms (next.js: 39ms, proxy.ts: 3ms, application-code: 45ms)
+ GET /admin 200 in 30ms (next.js: 1476µs, proxy.ts: 3ms, application-code: 25ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 534ms (next.js: 7ms, application-code: 527ms)
+✓ Compiled in 33ms
+ GET /admin 200 in 1710ms (next.js: 4ms, proxy.ts: 1581µs, application-code: 1705ms)
+🔄 Updating Order Status: eb943fb9-3bc2-4975-b795-08b04281d172 -> paid
+📧 Customer Email from DB: nathanellevi8@gmail.com
+🚀 Triggering Email to: nathanellevi8@gmail.com
+❌ Resend Error (Status): {"statusCode":403,"name":"validation_error","message":"You can only send testing emails to your own email address (nathanellevydi@gmail.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."}
+ POST /admin 200 in 2.7s (next.js: 4ms, proxy.ts: 3ms, application-code: 2.7s)
+  └─ ƒ updateOrderStatus("eb943fb9-3bc2-4975-b795-08b04281d172", "paid") in 1115ms app/admin/order-actions.ts
+✓ Compiled in 149ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 310ms (next.js: 121ms, application-code: 189ms)
+ GET /admin/login 200 in 194ms (next.js: 31ms, proxy.ts: 67ms, application-code: 96ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 77ms (next.js: 19ms, application-code: 58ms)
+ GET /admin/login 200 in 111ms (next.js: 3ms, proxy.ts: 26ms, application-code: 82ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 146ms (next.js: 22ms, application-code: 124ms)
+ GET /admin/login 200 in 154ms (next.js: 41ms, proxy.ts: 25ms, application-code: 89ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 67ms (next.js: 2ms, application-code: 64ms)
+ GET /admin/login 200 in 70ms (next.js: 7ms, proxy.ts: 46ms, application-code: 18ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 18ms (next.js: 1585µs, application-code: 16ms)
+ GET /admin/login 200 in 17ms (next.js: 1196µs, proxy.ts: 1980µs, application-code: 13ms)
+ GET /admin/login 200 in 68ms (next.js: 1100µs, proxy.ts: 1263µs, application-code: 66ms)
+ GET /admin/login 200 in 24ms (next.js: 1435µs, proxy.ts: 1750µs, application-code: 21ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 944ms (next.js: 94ms, application-code: 850ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 736ms (next.js: 4ms, application-code: 732ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 739ms (next.js: 4ms, application-code: 735ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 752ms (next.js: 2ms, application-code: 750ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 667ms (next.js: 1842µs, application-code: 665ms)
+✓ Compiled in 79ms
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 301ms (next.js: 154ms, application-code: 147ms)
+ GET /admin/login 200 in 399ms (next.js: 204ms, proxy.ts: 95ms, application-code: 100ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 156ms (next.js: 12ms, application-code: 143ms)
+ GET /admin/login 200 in 208ms (next.js: 34ms, proxy.ts: 3ms, application-code: 171ms)
+ GET /track/ecd37f66-8a74-4d05-87da-d15f1eefc965 200 in 131ms (next.js: 39ms, application-code: 92ms)
+ GET /admin/login 200 in 88ms (next.js: 5ms, proxy.ts: 5ms, application-code: 77ms)
+ GET /admin/login 200 in 73ms (next.js: 3ms, proxy.ts: 6ms, application-code: 64ms)
+ GET /admin/login 200 in 58ms (next.js: 2ms, proxy.ts: 27ms, application-code: 29ms)
+ GET /admin/login 200 in 17ms (next.js: 1709µs, proxy.ts: 1911µs, application-code: 13ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 841ms (next.js: 2ms, application-code: 839ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 1101ms (next.js: 112ms, application-code: 989ms)
+ GET /track/cc8188b0-675f-4f7f-a244-18cd0d3852a3 200 in 776ms (next.js: 4ms, application-code: 773ms)
+✓ Compiled in 60ms
+✓ Compiled in 169ms
+✓ Compiled in 69ms
+✓ Compiled in 80ms
+✓ Compiled in 28ms
+✓ Compiled in 19ms
+✓ Compiled in 108ms
+  Reload env: .env.local
+  Reload env: .env.local

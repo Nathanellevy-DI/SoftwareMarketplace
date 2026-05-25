@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  /* User-provided Warm Minimalist Palette */
+  --bg-primary: #F5EBE0;      /* Linen / Soft Cream */
+  --bg-secondary: #EDEDE9;    /* Parchment / Warm Gray */
+  --bg-tertiary: #E3D5CA;     /* Warm Alabaster / Tan */
+  --text-primary: #2b2522;     /* Deep Espresso / Charcoal */
+  --text-secondary: #6e625c;   /* Soft Warm Taupe */
+  --accent-primary: #D5BDAF;   /* Soft Brown / Taupe Accent */
+  --accent-secondary: #D6CCC2; /* Bone / Sand Accent */
+  
+  --border-color: rgba(43, 37, 34, 0.08);
+  --border-color-active: rgba(43, 37, 34, 0.25);
+  --glow-color: rgba(213, 189, 175, 0.4);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Premium Warm Glassmorphism & Soft Shadows */
+.glass-panel {
+  background: rgba(237, 236, 230, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px 0 rgba(43, 37, 34, 0.04);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-color-active);
+  box-shadow: 0 16px 40px 0 rgba(43, 37, 34, 0.08), 0 0 20px 0 var(--glow-color);
+}
+
+/* Terminal / Code Spec Block Styling */
+.code-terminal {
+  background: #25201d;
+  color: #f5ebe0;
+  border: 1px solid rgba(245, 235, 224, 0.08);
+  font-family: "Fira Code", Courier, monospace;
+}
+
+/* Premium Warm Button */
+.btn-neon {
+  position: relative;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  color: var(--bg-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(43, 37, 34, 0.1);
+}
+
+.btn-neon:hover {
+  background: linear-gradient(135deg, var(--text-secondary), var(--text-primary));
+  box-shadow: 0 8px 25px rgba(43, 37, 34, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Premium Warm Secondary Button */
+.btn-warm-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-warm-secondary:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color-active);
+}
+
+/* Cyber / Tech Badges adapted for Warm minimalist style */
+.badge-cyber {
+  background: var(--accent-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-active);
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Text selections */
+::selection {
+  background-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+
